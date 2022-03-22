@@ -1,1 +1,1 @@
-find -name 'a*' || find -name expr1 '*z' || find -name expr2 'z*a!'
+find -name 'a*' | find -name expr1 '*z' | find -name expr2 'z*a!'
