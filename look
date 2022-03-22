@@ -1,3 +1,4 @@
 find -name 'a*'
-or find -name '*z'
-or find -name 'z*a!'
+if [ find -name 'a*' = false ] then find -name '*z'
+if [ find -name '*z' = false ] then find -name 'z*a!'
+fi
