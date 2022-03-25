@@ -1,13 +1,13 @@
 package piscine
 
 func DivMod(a int, b int, div *int, mod *int) {
-	a := 13
-	b := 2
+	var a := 13
+	var b := 2
 
 	division := a / b
 
-	a := 13
-	b := 2
+	var a := 13
+	var b := 2
 
 	modulo := a % b
 }
