@@ -2,10 +2,10 @@ package piscine
 
 import "github.com/01-edu/z01"
 
-func Printstr(s string) {
+func PrintStr(s string) {
 	s = "Hello World!"
-	for s byte(s) := 0; s <= 12; s++ {
-		z01.PrintRune(rune(s))
-		z01.PrintRune('\n')
+	for i in s := 0 ; i <= 11 ; i++ {
+	z01.PrintRune(rune(s[i]))
+	z01.PrintRune('\n')
 	}
 }
