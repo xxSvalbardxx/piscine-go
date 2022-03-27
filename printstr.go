@@ -1,9 +1,11 @@
 package piscine
 
 import "github.com/01-edu/z01"
-		"fmt"
 
 func Printstr(s string) {
-	fmt.Print("Hello World!")
+	s = "Hello World!"
+	for s := 0 ; s < 12 ; s++ {
+	z01.PrintRune(Rune(s[0;12]))
 	z01.PrintRune('\n')
+	}
 }
