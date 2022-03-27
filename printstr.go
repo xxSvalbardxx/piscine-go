@@ -1,8 +1,8 @@
-package main
+package piscine
 
-import "fmt"
+import "github.com/01-edu/z01"
 
 func PrintStr(s string) {
 	s = "Hello World!"
-	fmt.Printf(s)
+	z01.PrintStr(s)
 }
