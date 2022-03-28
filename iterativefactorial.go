@@ -1,9 +1,11 @@
 package piscine
 
 func IterativeFactorial(nb int) int {
-	nb = nb * (n-1) {
+	if nb < 0 {
+		return 0
+	} else if nb == 1 || nb == 0 {
+		return 1
+	} else if nb == nb*(nb-1) {
 		return nb
-	} if nb = 0 || nb = 1 {
-		return 1 
 	}
 }
