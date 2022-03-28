@@ -1,5 +1,5 @@
-package piscine
+//package piscine
 
-func BasicAtoi(s string) int {
-	return atoi(s) int
-}
+//func BasicAtoi(s string) int {
+//	return atoi(s) int
+//
