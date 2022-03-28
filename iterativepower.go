@@ -1,11 +1,13 @@
 package piscine
 
 func IterativePower(nb int, power int) int {
-	if nb <= 0 {
+	result := 1
+	if power < 0 {
 		return 0
-	} else if nb >= 1 && nb <= 2147483647 {
-		return nb * power
-	} else {
+	} else if power == 0 {
 		return 1
+	} else {
+		result = nb * (IterativePower(nb, power-1))
 	}
+	return result
 }
