@@ -1,5 +1,5 @@
 package piscine
 
 func BasicAtoi(s string) int {
-	return Atoi(s)
+	return atoi(s) int
 }
