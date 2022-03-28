@@ -1,5 +1,8 @@
 package piscine
 
 func StrLen(s string) int {
-	len(s)
+	i := []s
+	for byte := range s {
+		Printf(s[i]))
+	}
 }
