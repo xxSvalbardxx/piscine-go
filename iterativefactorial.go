@@ -6,9 +6,12 @@ func IterativeFactorial(nb int) int {
 	} else if nb == 1 || nb == 0 {
 		return 1
 	} else {
+		rslt := 1
 		for i := 1; i <= nb; i++ {
-			nb = nb * (nb - 1)
+			rslt *= i
+			if nb > 2147483647 {
+				return 0
+			}
 		}
 	}
-	return i
 }
