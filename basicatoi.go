@@ -1,5 +1,6 @@
 package piscine
 
 func BasicAtoi(s string) int {
-	Atoi(int(s * string))
+	i = Atoi(s)
+	return i
 }
