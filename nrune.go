@@ -11,4 +11,4 @@ func NRune(s string, n int) rune {
 		return i[n-1]
 	}
 	return 0
-
+}
