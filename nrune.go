@@ -5,6 +5,6 @@ func NRune(s string, n int) rune {
 	length := 0
 	for i := range s {
 		length = i + 1
-	} 
-	return ([]rune(s)[length]
+	}
+	return (rn)[length]
 }
