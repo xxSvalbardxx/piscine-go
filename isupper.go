@@ -9,8 +9,6 @@ func IsUpper(s string) bool {
 			if x > 0 {
 				return false
 			}
-		} else {
-			return true
 		}
 	}
 	return false
