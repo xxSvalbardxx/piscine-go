@@ -6,6 +6,7 @@ func IsUpper(s string) bool {
 		if (str[i] <= 'A') && (str[i] >= 'Z') {
 			return false
 		}
+		continue
 	}
 	return true
 }
