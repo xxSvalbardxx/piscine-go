@@ -7,5 +7,5 @@ func ToUpper(s string) string {
 			str[i] = str[i] - 32
 		}
 	}
-	return s
+	return string(str)
 }
