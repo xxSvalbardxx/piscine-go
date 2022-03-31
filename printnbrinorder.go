@@ -25,6 +25,6 @@ func PrintNbrInOrder(n int) {
 					z01.PrintRune(rune(index + 48))
 				}
 			}
-		}
+		}			//z01
 	}
 }
