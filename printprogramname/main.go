@@ -1,4 +1,4 @@
-package piscine
+package main
 
 import (
 	"os"
@@ -7,9 +7,14 @@ import (
 )
 
 func main() {
-	arguments := os.Args
-	for _, i := range arguments[0] {
-		z01.PrintRune(i)
+	os := os.Args
+	name := []rune(os[0])
+	for i := 0; i < len(name); i++ {
+		if name[i] == '.' || name[i] == '/' {
+			i++
+		} else {
+			z01.PrintRune(name[i])
+		}
 	}
 	z01.PrintRune('\n')
 }
