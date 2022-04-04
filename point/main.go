@@ -22,7 +22,7 @@ func printStr(s string) {
 func main() {
 	points := point{} // Nouvelle variable pour appeler le custom type
 	setPoint(&points)
-	newStr := "x = " + x + ", y = " + points.y
+	newStr := "x = " + points.x + ", y = " + points.y
 	printStr(newStr)
 	z01.PrintRune('\n')
 }
