@@ -15,7 +15,6 @@ func main() {
 			fmt.Println("Error")
 		}
 		fmt.Print(string(content))
-		fmt.Println()
 	} else if len(arguments) > 2 {
 		fmt.Println("Too many arguments")
 	} else {
