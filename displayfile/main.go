@@ -20,4 +20,4 @@ func main() {
 	} else {
 		fmt.Println("File name missing")
 	}
-}   
+}
