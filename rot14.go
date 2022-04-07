@@ -1,26 +1,34 @@
-package piscine
+package main
+
+import "github.com/01-edu/z01"
 
 func Rot14(s string) string {
-	runes := []rune(s)
-	result := make([]rune, 0)
-
-	for _, l := range runes {
-		if l >= 'a' && l <= 'z' {
-			if l+14 > 'z' {
-				result = append(result, 'a'+l-'a'+14-26)
+	r := []rune(s)
+	var result string
+	for i := 0; i < len(r); i++ {
+		if r[i] >= 'a' && r[i] <= 'z' {
+			if r[i] >= 'm' {
+				r[i] = r[i] - 12
 			} else {
-				result = append(result, 'a'+l-'a'+14)
+				r[i] = r[i] + 14
 			}
-		} else if l >= 'A' && l <= 'Z' {
-			if l+14 > 'Z' {
-				result = append(result, 'A'+l-'A'+14-26)
+		} else if r[i] >= 'A' && r[i] <= 'Z' {
+			if r[i] >= 'M' {
+				r[i] = r[i] - 12
 			} else {
-				result = append(result, 'A'+l-'A'+14)
+				r[i] = r[i] + 14
 			}
-		} else {
-			result = append(result, l)
 		}
+		result += string(r[i])
 	}
+	return result
+}
 
-	return string(result)
+func main() {
+	result := Rot14("Hello! How are You?")
+
+	for _, r := range result {
+		z01.PrintRune(r)
+	}
+	z01.PrintRune('\n')
 }
