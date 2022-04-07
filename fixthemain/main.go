@@ -47,10 +47,4 @@ func main() {
 	if IsDoorOpen(door) {
 		CloseDoor(door)
 	}
-	if CloseDoor(door) {
-		CloseDoor(door)
-	}
-	if OpenDoor(door) {
-		OpenDoor(door)
-	}
 }
