@@ -50,7 +50,7 @@ func main() {
 	if CloseDoor(door) {
 		CloseDoor(door)
 	}
-	if IsDoorClose(door) {
+	if OpenDoor(door) {
 		OpenDoor(door)
 	}
 }
