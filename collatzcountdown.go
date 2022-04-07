@@ -9,7 +9,7 @@ func CollatzCountdown(start int) int {
 		if start%2 == 0 {
 			start = start / 2
 		} else {
-			start = (start * 3) + 1
+			start = 3*start + 1
 		}
 		n++
 	}
