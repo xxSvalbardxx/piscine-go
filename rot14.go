@@ -1,15 +1,26 @@
 package piscine
 
-import "github.com/01-edu/z01"
-
 func Rot14(s string) string {
-	a := []rune(s)
-	for _, i := range a {
-		if rune(a[i+14]) > 'Z' && rune(a[i+14]) < 'a' || rune(a[i+14]) > 'z' {
-			z01.PrintRune(rune(a[i-12]))
+	runes := []rune(s)
+	result := make([]rune, 0)
+
+	for _, l := range runes {
+		if l >= 'a' && l <= 'z' {
+			if l+14 > 'z' {
+				result = append(result, 'a'+l-'a'+14-26)
+			} else {
+				result = append(result, 'a'+l-'a'+14)
+			}
+		} else if l >= 'A' && l <= 'Z' {
+			if l+14 > 'Z' {
+				result = append(result, 'A'+l-'A'+14-26)
+			} else {
+				result = append(result, 'A'+l-'A'+14)
+			}
 		} else {
-			z01.PrintRune(rune(a[i+14]))
+			result = append(result, l)
 		}
 	}
-	return string(a)
+
+	return string(result)
 }
