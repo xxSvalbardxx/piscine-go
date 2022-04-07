@@ -19,8 +19,9 @@ func printStr(s string) {
 	}
 }
 
+// https://www.youtube.com/watch?v=dm9oXt6_YNA
 func main() {
-	points := point{} // Nouvelle variable pour appeler le custom type
+	points := point{} // Nouvelle variable pour appeler le custom type: {}
 	setPoint(&points)
 	newStr := "x = " + points.x + ", y = " + points.y
 	printStr(newStr)

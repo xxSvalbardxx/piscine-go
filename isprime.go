@@ -5,7 +5,7 @@ func IsPrime(nb int) bool {
 		return false
 	} else {
 		for i := 2; i <= nb/2; i++ {
-			if nb%i == 0 {
+			if nb%i == 0 { // si le nombre est divisible et que le resultat est un nbr a virgule, alors le nbr n'est pas premier
 				return false
 			}
 		}
