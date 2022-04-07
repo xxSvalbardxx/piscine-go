@@ -1,9 +1,6 @@
 package piscine
 
 func Compact(ptr *[]string) int {
-	package piscine
-
-func Compact(ptr *[]string) int {
 	length := 0
 	for _, s := range *ptr {
 		if s != "" {
@@ -19,4 +16,5 @@ func Compact(ptr *[]string) int {
 		}
 	}
 	*ptr = array
+	return length
 }
