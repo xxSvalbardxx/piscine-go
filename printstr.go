@@ -1,9 +1,11 @@
 package piscine
 
-import "github.com/01-edu/z01"
+import (
+	"github.com/01-edu/z01"
+)
 
 func PrintStr(s string) {
-	for i := 0; i <= len(s)-1; i++ {
+	for i := range s {
 		z01.PrintRune(rune(s[i]))
 	}
 }
