@@ -1,6 +1,4 @@
-package main
-
-import "github.com/01-edu/z01"
+package piscine
 
 func Rot14(s string) string {
 	r := []rune(s)
@@ -22,13 +20,4 @@ func Rot14(s string) string {
 		result += string(r[i])
 	}
 	return result
-}
-
-func main() {
-	result := Rot14("Hello! How are You?")
-
-	for _, r := range result {
-		z01.PrintRune(r)
-	}
-	z01.PrintRune('\n')
 }
