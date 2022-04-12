@@ -2,12 +2,12 @@ package piscine
 
 type NodeL struct {
 	Data interface{} // is an element of the node
-	Next *NodeL      // indicate where is the next node ;
+	Next *NodeL      // indicate where/what is the next node
 }
 
 type List struct {
-	Head *NodeL
-	Tail *NodeL
+	Head *NodeL // the only node that we use and modify here
+	Tail *NodeL // completely useless here because of the main func
 }
 
 func ListPushBack(l *List, data interface{}) { // "l" is  ; "*List" is the receiver ; "data interface {}" is the prepend(ajouté) element ; (...) called a method receiver
@@ -19,7 +19,7 @@ func ListPushBack(l *List, data interface{}) { // "l" is  ; "*List" is the recei
 		for current.Next != nil { // if NodeL's Data of the next Node
 			current = current.Next
 		}
-		current.Next = n
+		current.Next = n // return the three case for which we have modified the Head because the node after is empty
 	}
 }
 
