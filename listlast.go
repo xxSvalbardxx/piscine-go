@@ -1,8 +1,6 @@
-package main
+package piscine
 
-import "fmt"
-
-type NodeL struct {
+/*type NodeL struct {
 	Data interface{}
 	Next *NodeL
 }
@@ -24,6 +22,7 @@ func ListPushBack(l *List, data interface{}) {
 		current.Next = n
 	}
 }
+*/
 
 func ListLast(l *List) interface{} {
 	for l.Head != nil {
@@ -35,6 +34,7 @@ func ListLast(l *List) interface{} {
 	return nil
 }
 
+/*
 func main() {
 	link := &List{}
 	link2 := &List{}
@@ -46,3 +46,4 @@ func main() {
 	fmt.Println(ListLast(link))
 	fmt.Println(ListLast(link2))
 }
+*/
