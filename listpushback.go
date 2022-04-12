@@ -15,8 +15,8 @@ func ListPushBack(l *List, data interface{}) { // "l" is  ; "*List" is the recei
 	if l.Head == nil {      // if Head is empty ( nil: non initialised / zero value )
 		l.Head = n // the element inside &NodeL ( {Data: data} ) is now stored in the Head
 	} else {
-		current := l.Head        // current(actuel)
-		if current.Next != nil { // if NodeL's Data of the next Node
+		current := l.Head         // current(actuel)
+		for current.Next != nil { // if NodeL's Data of the next Node
 			current = current.Next
 		}
 		current.Next = n
