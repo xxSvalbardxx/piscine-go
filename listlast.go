@@ -25,11 +25,11 @@ func ListPushBack(l *List, data interface{}) {
 */
 
 func ListLast(l *List) interface{} {
-	for l.Head != nil {
-		if l.Head.Next == nil {
-			return l.Head.Data
+	for l.Head != nil { // pour l'actuel différent de vide
+		if l.Head.Next == nil { // si le suivant est vide
+			return l.Head.Data // retourne ce qu'il y a dans l'actuel
 		}
-		l.Head = l.Head.Next
+		l.Head = l.Head.Next // l'actuel est remplacé par le suivant pour boucler, si l'actuel est different de vide. La boucle s'arrete lorsque le suivant est vide.
 	}
 	return nil
 }

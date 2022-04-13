@@ -1,29 +1,16 @@
 package piscine
 
 /*
-import (
-	"fmt"
-)
-
 type NodeL struct {
 	Data interface{}
 	Next *NodeL
 }
+
 type List struct {
-	Head *NodeL // the only node that we use and modify here
-	Tail *NodeL // completely useless here because of the main func
-}
-*/
-func ListAt(l *NodeL, pos int) *NodeL {
-	count := 0
-	for l != nil && count < pos { // "l" agit un peu comme un pointer?
-		count++
-		l = l.Next
-	}
-	return l
+	Head *NodeL
+	Tail *NodeL
 }
 
-/*
 func ListPushBack(l *List, data interface{}) { // "l" is  ; "*List" is the receiver ; "data interface {}" is the prepend(ajouté) element ; (...) called a method receiver
 	n := &NodeL{Data: data} // a temporary var to store the first element
 	if l.Head == nil {      // if Head is empty ( nil: non initialised / zero value )
@@ -36,17 +23,39 @@ func ListPushBack(l *List, data interface{}) { // "l" is  ; "*List" is the recei
 		current.Next = n // return the three case for which we have modified the Head because the node after is empty
 	}
 }
+*/
+func ListReverse(l *List) {
+	current := l.Head   // La variable sert de stockage
+	var previous *NodeL // necéssaire pour définir le type de "nil"
+	previous = nil
+	for current != nil {
+		next := current.Next    // stock le l.Head suivant
+		current.Next = previous // efface le suivant
+		previous = current
+		current = next // l'actuel prends la place du suivant
+	}
+	l.Head = previous
+}
 
+/*
 func main() {
 	link := &List{}
 
-	ListPushBack(link, "hello")
-	ListPushBack(link, "how are")
-	ListPushBack(link, "you")
 	ListPushBack(link, 1)
+	ListPushBack(link, 2)
+	ListPushBack(link, 3)
+	ListPushBack(link, 4)
 
-	fmt.Println(ListAt(link.Head, 3).Data)
-	fmt.Println(ListAt(link.Head, 1).Data)
-	fmt.Println(ListAt(link.Head, 7))
+	ListReverse(link)
+
+	it := link.Head
+
+	for it != nil {
+		fmt.Println(it.Data)
+		it = it.Next
+	}
+
+	fmt.Println("Tail", link.Tail)
+	fmt.Println("Head", link.Head)
 }
 */
