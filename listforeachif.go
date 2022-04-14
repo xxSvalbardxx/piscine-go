@@ -1,7 +1,5 @@
 package piscine
 
-import "fmt"
-
 /*
 
 
@@ -56,6 +54,7 @@ func ListForEachIf(l *List, f func(*NodeL), cond func(*NodeL) bool) {
 	}
 }
 
+/*
 func PrintElem(node *NodeL) {
 	fmt.Println(node.Data)
 }
@@ -73,7 +72,7 @@ func PrintList(l *List) {
 	fmt.Print("nil", "\n")
 }
 
-/*
+
 func main() {
 	link := &List{}
 
